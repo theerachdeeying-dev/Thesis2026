@@ -5,24 +5,17 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>ตั้งโกะ - Mascot Showcase</title>
+  <meta name="description"
+    content="ตั้งโกะ - Mascot Showcase นำเสนอมาสคอตประจำจังหวัดเชียงราย น่ารักและเต็มไปด้วยเรื่องราววัฒนธรรมล้านนา" />
+  <meta name="keywords" content="ตั้งโกะ, มาสคอต, เชียงราย, ล้านนา, แมงสี่หูห้าตา" />
+  <meta property="og:title" content="ตั้งโกะ - Mascot Showcase" />
+  <meta property="og:description" content="ตังโกะ เพื่อนตัวน้อยจากเชียงราย ที่เล่าเรื่องเมืองผ่านความน่ารัก" />
+  <meta property="og:image" content="png/ตังโกะสี.png" />
+  <meta property="og:type" content="website" />
+  <link rel="icon" type="image/png" href="png/ตังโกะสี โล้โก้จิ๋ว.png" />
   <!-- Tailwind CSS CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
-  <script>
-    tailwind.config = {
-      theme: {
-        extend: {
-          colors: {
-            'brand-yellow': '#fcd34d',
-            'brand-brown': '#5c4033',
-            'brand-gray': '#e5e7eb',
-          },
-          fontFamily: {
-            sans: ['Kanit', 'sans-serif'],
-          },
-        }
-      }
-    }
-  </script>
+  <script src="script.js"></script>
   <!-- Custom Styles -->
   <link rel="stylesheet" href="style.css">
   <!-- Lucide Icons -->
@@ -171,15 +164,15 @@
 
     <!-- Profile Section -->
     <section id="mascot" class="section-padding mascot-pattern grid md:grid-cols-3 gap-12">
-      <div class="md:col-span-2 space-y-6">
-        <h2 class="text-5xl font-bold text-brand-brown mb-8">ตัวมาสคอต: ตั้งโกะ</h2>
-        <div>
+      <div class="md:col-span-2 space-y-6 stagger-wrapper">
+        <h2 class="text-5xl font-bold text-brand-brown mb-8 stagger-item">ตัวมาสคอต: ตั้งโกะ</h2>
+        <div class="stagger-item">
           <h4 class="font-bold text-brand-brown">ที่มา</h4>
           <p class="text-gray-800">สัตว์หิมพานต์แห่งการประทานพร เป็นทูตที่เกิดจากพลังงานของธาตุดินและไฟ
             มีรูปร่างคล้ายสัตว์ประหลาดตัวน้อย มีห้าตาและสี่หู ร่างกายสีน้ำตาลเข้ม (สื่อถึงดินและถ่าน)
             คอยเฝ้าสังเกตการณ์ความดีงามของมนุษย์ และเป็นสัญลักษณ์ของการเปลี่ยนความยากลำบากให้เป็นความมั่งคั่ง</p>
         </div>
-        <div class="grid grid-cols-2 gap-6">
+        <div class="grid grid-cols-2 gap-6 stagger-item">
           <div>
             <h4 class="font-bold text-brand-brown">ลักษณะ</h4>
             <p class="text-gray-800">ร่างกายสีน้ำตาลเข้ม มีห้าตาและสี่หู มีเขียวชมพู</p>
@@ -198,7 +191,7 @@
             <p class="text-gray-800">คนโกหกหลอกลวง, ความเย็นเยียบ และ การนำความสามารถไปใช้ในทางที่ผิด</p>
           </div>
         </div>
-        <div>
+        <div class="stagger-item">
           <h4 class="font-bold text-brand-brown">ความสามารถ</h4>
           <p class="text-gray-800">1. แปรธาตุทองคำ: สามารถ กินถ่าน (ด้านไฟ) เป็นอาหาร และ ถ่ายออกมาเป็นทองคำบริสุทธิ์ได้
             (ทองคำที่ได้จะมากหรือน้อยขึ้นอยู่กับความซื่อสัตย์ของผู้ที่ให้ถ่านอาหาร)<br />2. การกลายร่างหลายหลาย: สามารถ
@@ -206,8 +199,9 @@
             ลวดลายและเอกลักษณ์ (เช่น ลายสับปะรด/ลายกาแฟ) พร้อมทั้ง สามารถใช้ความสามารถพื้นฐาน ของชุดตัวนั้นๆ ได้</p>
         </div>
       </div>
-      <div class="flex items-center justify-center">
-        <img src="png/1.png" alt="Tang Ko Profile" class="w-full h-auto drop-shadow-2xl" referrerPolicy="no-referrer" />
+      <div class="flex items-center justify-center tilt-wrapper">
+        <img src="png/1.png" alt="Tang Ko Profile" class="w-full h-auto drop-shadow-2xl" referrerPolicy="no-referrer" /
+          class="tilt-element w-full h-auto drop-shadow-2xl">
       </div>
     </section>
 
@@ -251,37 +245,42 @@
       <div class="grid grid-cols-2 md:grid-cols-3 gap-12 max-w-4xl mx-auto">
         <div class="text-center space-y-4">
           <div class="aspect-square flex items-center justify-center">
-            <img src="png/1.png" alt="ยืน" class="max-w-full max-h-full" referrerPolicy="no-referrer" />
+            <img src="png/1.png" alt="ยืน" class="max-w-full max-h-full" referrerPolicy="no-referrer" / loading="lazy">
           </div>
           <p class="font-bold text-brand-brown">ยืน</p>
         </div>
         <div class="text-center space-y-4">
           <div class="aspect-square flex items-center justify-center">
-            <img src="png/1 เดิน.png" alt="เดิน" class="max-w-full max-h-full" referrerPolicy="no-referrer" />
+            <img src="png/1 เดิน.png" alt="เดิน" class="max-w-full max-h-full" referrerPolicy="no-referrer" /
+              loading="lazy">
           </div>
           <p class="font-bold text-brand-brown">เดิน</p>
         </div>
         <div class="text-center space-y-4">
           <div class="aspect-square flex items-center justify-center">
-            <img src="png/1 นั่ง.png" alt="นั่ง" class="max-w-full max-h-full" referrerPolicy="no-referrer" />
+            <img src="png/1 นั่ง.png" alt="นั่ง" class="max-w-full max-h-full" referrerPolicy="no-referrer" /
+              loading="lazy">
           </div>
           <p class="font-bold text-brand-brown">นั่ง</p>
         </div>
         <div class="text-center space-y-4">
           <div class="aspect-square flex items-center justify-center">
-            <img src="png/1 นอน.png" alt="นอน" class="max-w-full max-h-full" referrerPolicy="no-referrer" />
+            <img src="png/1 นอน.png" alt="นอน" class="max-w-full max-h-full" referrerPolicy="no-referrer" /
+              loading="lazy">
           </div>
           <p class="font-bold text-brand-brown">นอน</p>
         </div>
         <div class="text-center space-y-4">
           <div class="aspect-square flex items-center justify-center">
-            <img src="png/1 กระโดด.png" alt="กระโดด" class="max-w-full max-h-full" referrerPolicy="no-referrer" />
+            <img src="png/1 กระโดด.png" alt="กระโดด" class="max-w-full max-h-full" referrerPolicy="no-referrer" /
+              loading="lazy">
           </div>
           <p class="font-bold text-brand-brown">กระโดด</p>
         </div>
         <div class="text-center space-y-4">
           <div class="aspect-square flex items-center justify-center">
-            <img src="png/1 ตกใจ.png" alt="ตกใจ/ประหลาดใจ" class="max-w-full max-h-full" referrerPolicy="no-referrer" />
+            <img src="png/1 ตกใจ.png" alt="ตกใจ/ประหลาดใจ" class="max-w-full max-h-full" referrerPolicy="no-referrer" /
+              loading="lazy">
           </div>
           <p class="font-bold text-brand-brown">ตกใจ/ประหลาดใจ</p>
         </div>
@@ -291,7 +290,8 @@
     <!-- Colors Section -->
     <section class="section-padding bg-brand-gray/30 grid md:grid-cols-2 gap-12 items-center">
       <div class="bg-brand-yellow p-12 rounded-3xl">
-        <img src="png/1.png" alt="Mascot Colors" class="w-full h-auto drop-shadow-xl" referrerPolicy="no-referrer" />
+        <img src="png/1.png" alt="Mascot Colors" class="w-full h-auto drop-shadow-xl" referrerPolicy="no-referrer" /
+          loading="lazy">
       </div>
       <div>
         <h2 class="text-4xl font-bold mb-12 text-brand-brown">สีของตัวละคร</h2>
@@ -329,9 +329,9 @@
 
 
     <section id="mascot" class="section-padding mascot-pattern grid md:grid-cols-3 gap-12">
-      <div class="md:col-span-2 space-y-6">
-        <h2 class="text-5xl font-bold text-brand-brown mb-8">ตัวมาสคอต: ห่อโชค</h2>
-        <div>
+      <div class="md:col-span-2 space-y-6 stagger-wrapper">
+        <h2 class="text-5xl font-bold text-brand-brown mb-8 stagger-item">ตัวมาสคอต: ห่อโชค</h2>
+        <div class="stagger-item">
           <h4 class="font-bold text-brand-brown">ที่มา</h4>
           <p class="text-gray-800">กล่าวกันว่าในดินแดนล้านนา
             โดยเฉพาะเมืองเชียงรายที่อุดมสมบูรณ์ไปด้วยพืชพรรณและวัฒนธรรมอาหารอันหลากหลาย
@@ -342,7 +342,7 @@
             ภูตห่อโชคจะปรากฏตัวในยามที่ผู้คนกำลังเตรียมหรือรับประทาน "อาหารห่อ" ด้วยความสุข
             โดยเฉพาะในตอนเช้าตรู่ที่ชาวบ้านตื่นมาเตรียมเสบียง</p>
         </div>
-        <div class="grid grid-cols-2 gap-6">
+        <div class="grid grid-cols-2 gap-6 stagger-item">
           <div>
             <h4 class="font-bold text-brand-brown">ลักษณะ</h4>
             <p class="text-gray-800">กลมป้อม, ห่อด้วยใบตองเขียวสด มัดโบว์เชือกกล้วยสีทอง,มีดวงตาและรอยยิ้มร่าเริง </p>
@@ -360,7 +360,7 @@
             <p class="text-gray-800">อาหารที่ทิ้งขว้าง, การห่อที่ไม่เรียบร้อย, ความหิวโหย</p>
           </div>
         </div>
-        <div>
+        <div class="stagger-item">
           <h4 class="font-bold text-brand-brown">ความสามารถ</h4>
           <p class="text-gray-800">เสก "โภคโชค" (โชคแห่งอาหาร) ได้ 3 มื้อต่อวัน
             โดยดึงพลังงานจากอาหารหลากหลายในห่อมาสร้างเมนูใหม่ให้ผู้อื่นอิ่มท้องและได้รับโชคดีเสมอ</p>
@@ -413,31 +413,36 @@
       <div class="grid grid-cols-2 md:grid-cols-3 gap-12 max-w-4xl mx-auto">
         <div class="text-center space-y-4">
           <div class="aspect-square flex items-center justify-center">
-            <img src="png/2 ด้านหน้า.png" alt="ยืน" class="max-w-full max-h-full" referrerPolicy="no-referrer" />
+            <img src="png/2 ด้านหน้า.png" alt="ยืน" class="max-w-full max-h-full" referrerPolicy="no-referrer" /
+              loading="lazy">
           </div>
           <p class="font-bold text-brand-brown">ยืน</p>
         </div>
         <div class="text-center space-y-4">
           <div class="aspect-square flex items-center justify-center">
-            <img src="png/2 เดิน.png" alt="เดิน" class="max-w-full max-h-full" referrerPolicy="no-referrer" />
+            <img src="png/2 เดิน.png" alt="เดิน" class="max-w-full max-h-full" referrerPolicy="no-referrer" /
+              loading="lazy">
           </div>
           <p class="font-bold text-brand-brown">เดิน</p>
         </div>
         <div class="text-center space-y-4">
           <div class="aspect-square flex items-center justify-center">
-            <img src="png/2 ด้านหน้า.png" alt="นั่ง" class="max-w-full max-h-full" referrerPolicy="no-referrer" />
+            <img src="png/2 ด้านหน้า.png" alt="นั่ง" class="max-w-full max-h-full" referrerPolicy="no-referrer" /
+              loading="lazy">
           </div>
           <p class="font-bold text-brand-brown">นั่ง</p>
         </div>
         <div class="text-center space-y-4">
           <div class="aspect-square flex items-center justify-center">
-            <img src="png/2 นอน.png" alt="นอน" class="max-w-full max-h-full" referrerPolicy="no-referrer" />
+            <img src="png/2 นอน.png" alt="นอน" class="max-w-full max-h-full" referrerPolicy="no-referrer" /
+              loading="lazy">
           </div>
           <p class="font-bold text-brand-brown">นอน</p>
         </div>
         <div class="text-center space-y-4">
           <div class="aspect-square flex items-center justify-center">
-            <img src="png/2 กระโดด.png" alt="กระโดด" class="max-w-full max-h-full" referrerPolicy="no-referrer" />
+            <img src="png/2 กระโดด.png" alt="กระโดด" class="max-w-full max-h-full" referrerPolicy="no-referrer" /
+              loading="lazy">
           </div>
           <p class="font-bold text-brand-brown">กระโดด</p>
         </div>
@@ -485,9 +490,9 @@
 
 
     <section id="mascot" class="section-padding mascot-pattern grid md:grid-cols-3 gap-12">
-      <div class="md:col-span-2 space-y-6">
-        <h2 class="text-5xl font-bold text-brand-brown mb-8">ตัวมาสคอต: ผาอื้อ</h2>
-        <div>
+      <div class="md:col-span-2 space-y-6 stagger-wrapper">
+        <h2 class="text-5xl font-bold text-brand-brown mb-8 stagger-item">ตัวมาสคอต: ผาอื้อ</h2>
+        <div class="stagger-item">
           <h4 class="font-bold text-brand-brown">ที่มา</h4>
           <p class="text-gray-800">ตำนานแห่งเข็มและด้าย: ในเทือกเขาสูงของเชียงราย ซึ่งเป็นที่ตั้งถิ่นฐานของชาวอาข่า
             มีความเชื่อว่าทุกผืนผ้าปักที่บรรจงสร้างขึ้นด้วยความรักและอดทน จะมีจิตวิญญาณแห่งความงามสถิตอยู่
@@ -496,7 +501,7 @@
             จิตวิญญาณแห่งความละเอียดอ่อน และความสง่างามของเครื่องแต่งกายทั้งหมด
             ก็รวมตัวกันกลายเป็นภูตตัวน้อยที่มีชีวิตชีวาขึ้นมาในยามค่ำคืนที่แสงจันทร์ส่องกระทบเครื่องเงินบนหมวก</p>
         </div>
-        <div class="grid grid-cols-2 gap-6">
+        <div class="grid grid-cols-2 gap-6 stagger-item">
           <div>
             <h4 class="font-bold text-brand-brown">ลักษณะ</h4>
             <p class="text-gray-800">ภูตตัวน้อยสวมชุดประจำเผ่าอาข่าที่เต็มไปด้วยลวดลายสีสันสดใส
@@ -518,7 +523,7 @@
               จะใช้วิธีเดินเรียบๆ </p>
           </div>
         </div>
-        <div>
+        <div class="stagger-item">
           <h4 class="font-bold text-brand-brown">ความสามารถ</h4>
           <p class="text-gray-800">แปลงกายเครื่องแต่งกาย: สามารถเปลี่ยนส่วนต่างๆ ของเครื่องแต่งกายงานปักให้กลายเป็น
             อุปกรณ์วิเศษ ที่ช่วยในการงานฝีมือหรืองานบ้านได้ </p>
@@ -571,31 +576,36 @@
       <div class="grid grid-cols-2 md:grid-cols-3 gap-12 max-w-4xl mx-auto">
         <div class="text-center space-y-4">
           <div class="aspect-square flex items-center justify-center">
-            <img src="png/3 ด้านหน้า.png" alt="ยืน" class="max-w-full max-h-full" referrerPolicy="no-referrer" />
+            <img src="png/3 ด้านหน้า.png" alt="ยืน" class="max-w-full max-h-full" referrerPolicy="no-referrer" /
+              loading="lazy">
           </div>
           <p class="font-bold text-brand-brown">ยืน</p>
         </div>
         <div class="text-center space-y-4">
           <div class="aspect-square flex items-center justify-center">
-            <img src="png/3 เดิน.png" alt="เดิน" class="max-w-full max-h-full" referrerPolicy="no-referrer" />
+            <img src="png/3 เดิน.png" alt="เดิน" class="max-w-full max-h-full" referrerPolicy="no-referrer" /
+              loading="lazy">
           </div>
           <p class="font-bold text-brand-brown">เดิน</p>
         </div>
         <div class="text-center space-y-4">
           <div class="aspect-square flex items-center justify-center">
-            <img src="png/3 ด้านหน้า.png" alt="นั่ง" class="max-w-full max-h-full" referrerPolicy="no-referrer" />
+            <img src="png/3 ด้านหน้า.png" alt="นั่ง" class="max-w-full max-h-full" referrerPolicy="no-referrer" /
+              loading="lazy">
           </div>
           <p class="font-bold text-brand-brown">นั่ง</p>
         </div>
         <div class="text-center space-y-4">
           <div class="aspect-square flex items-center justify-center">
-            <img src="png/3 นอน.png" alt="นอน" class="max-w-full max-h-full" referrerPolicy="no-referrer" />
+            <img src="png/3 นอน.png" alt="นอน" class="max-w-full max-h-full" referrerPolicy="no-referrer" /
+              loading="lazy">
           </div>
           <p class="font-bold text-brand-brown">นอน</p>
         </div>
         <div class="text-center space-y-4">
           <div class="aspect-square flex items-center justify-center">
-            <img src="png/3 กระโดด.jpg" alt="กระโดด" class="max-w-full max-h-full" referrerPolicy="no-referrer" />
+            <img src="png/3 กระโดด.jpg" alt="กระโดด" class="max-w-full max-h-full" referrerPolicy="no-referrer" /
+              loading="lazy">
           </div>
           <p class="font-bold text-brand-brown">กระโดด</p>
         </div>
@@ -643,15 +653,15 @@
 
 
     <section id="mascot" class="section-padding mascot-pattern grid md:grid-cols-3 gap-12">
-      <div class="md:col-span-2 space-y-6">
-        <h2 class="text-5xl font-bold text-brand-brown mb-8">ตัวมาสคอต: ผาชา</h2>
-        <div>
+      <div class="md:col-span-2 space-y-6 stagger-wrapper">
+        <h2 class="text-5xl font-bold text-brand-brown mb-8 stagger-item">ตัวมาสคอต: ผาชา</h2>
+        <div class="stagger-item">
           <h4 class="font-bold text-brand-brown">ที่มา</h4>
           <p class="text-gray-800">เกิดจากพลังงานความบริสุทธิ์ของ ไร่ชาบนดอยสูง ในเชียงราย ซึ่งเป็นแหล่งผลิตชาคุณภาพดี
             มีรูปลักษณ์คล้ายพุ่มชาที่ถูกตัดแต่งอย่างดี มีดวงตาโตบ่งบอกความตื่นตัว และมีถ้วยชาเล็กๆ อยู่ด้านบน
             เป็นที่ๆน้องเกิดขึ้นมา </p>
         </div>
-        <div class="grid grid-cols-2 gap-6">
+        <div class="grid grid-cols-2 gap-6 stagger-item">
           <div>
             <h4 class="font-bold text-brand-brown">ลักษณะ</h4>
             <p class="text-gray-800">รูปร่างกลมป้อมคล้ายพุ่มไม้สีเขียว มีใบชาปกคลุม มีถ้วยชาตั้งอยู่บนศีรษะ </p>
@@ -672,7 +682,7 @@
               (ทำให้ชาขม)</p>
           </div>
         </div>
-        <div>
+        <div class="stagger-item">
           <h4 class="font-bold text-brand-brown">ความสามารถ</h4>
           <p class="text-gray-800">1. ทำน้ำชาจากร่างกาย: สามารถ ผลิตน้ำชาคุณภาพดี ออกมาจากร่างกาย
             เพื่อให้ผู้คนได้ดื่มเพิ่มพลังงานและความสดชื่น <br />2. อบไอน้ำบำรุงผิว: ปล่อย ไอน้ำชา
@@ -726,31 +736,36 @@
       <div class="grid grid-cols-2 md:grid-cols-3 gap-12 max-w-4xl mx-auto">
         <div class="text-center space-y-4">
           <div class="aspect-square flex items-center justify-center">
-            <img src="png/4 ด้านหน้า.png" alt="ยืน" class="max-w-full max-h-full" referrerPolicy="no-referrer" />
+            <img src="png/4 ด้านหน้า.png" alt="ยืน" class="max-w-full max-h-full" referrerPolicy="no-referrer" /
+              loading="lazy">
           </div>
           <p class="font-bold text-brand-brown">ยืน</p>
         </div>
         <div class="text-center space-y-4">
           <div class="aspect-square flex items-center justify-center">
-            <img src="png/4 เดิน.png" alt="เดิน" class="max-w-full max-h-full" referrerPolicy="no-referrer" />
+            <img src="png/4 เดิน.png" alt="เดิน" class="max-w-full max-h-full" referrerPolicy="no-referrer" /
+              loading="lazy">
           </div>
           <p class="font-bold text-brand-brown">เดิน</p>
         </div>
         <div class="text-center space-y-4">
           <div class="aspect-square flex items-center justify-center">
-            <img src="png/4 นั่ง.png" alt="นั่ง" class="max-w-full max-h-full" referrerPolicy="no-referrer" />
+            <img src="png/4 นั่ง.png" alt="นั่ง" class="max-w-full max-h-full" referrerPolicy="no-referrer" /
+              loading="lazy">
           </div>
           <p class="font-bold text-brand-brown">นั่ง</p>
         </div>
         <div class="text-center space-y-4">
           <div class="aspect-square flex items-center justify-center">
-            <img src="png/4 นอน.png" alt="นอน" class="max-w-full max-h-full" referrerPolicy="no-referrer" />
+            <img src="png/4 นอน.png" alt="นอน" class="max-w-full max-h-full" referrerPolicy="no-referrer" /
+              loading="lazy">
           </div>
           <p class="font-bold text-brand-brown">นอน</p>
         </div>
         <div class="text-center space-y-4">
           <div class="aspect-square flex items-center justify-center">
-            <img src="png/4 กระโดด.png" alt="กระโดด" class="max-w-full max-h-full" referrerPolicy="no-referrer" />
+            <img src="png/4 กระโดด.png" alt="กระโดด" class="max-w-full max-h-full" referrerPolicy="no-referrer" /
+              loading="lazy">
           </div>
           <p class="font-bold text-brand-brown">กระโดด</p>
         </div>
@@ -798,9 +813,9 @@
 
 
     <section id="mascot" class="section-padding mascot-pattern grid md:grid-cols-3 gap-12">
-      <div class="md:col-span-2 space-y-6">
-        <h2 class="text-5xl font-bold text-brand-brown mb-8">ตัวมาสคอต: ผาดิน</h2>
-        <div>
+      <div class="md:col-span-2 space-y-6 stagger-wrapper">
+        <h2 class="text-5xl font-bold text-brand-brown mb-8 stagger-item">ตัวมาสคอต: ผาดิน</h2>
+        <div class="stagger-item">
           <h4 class="font-bold text-brand-brown">ที่มา</h4>
           <p class="text-gray-800">ในเชียงราย
             ดินจากแม่น้ำกกและดินดอยถูกนำมาปั้นขึ้นรูปเป็นเครื่องใช้และของประดับตกแต่งมานับพันปี
@@ -810,7 +825,7 @@
             (ช้างเป็นสัตว์มงคลและเป็นสัญลักษณ์ของความอุดมสมบูรณ์และพละกำลัง) ยืนหยัดอยู่บนฐานที่มั่นคง
             ดุจดั่งความมั่นคงของแผ่นดินและวัฒนธรรมเชียงราย </p>
         </div>
-        <div class="grid grid-cols-2 gap-6">
+        <div class="grid grid-cols-2 gap-6 stagger-item">
           <div>
             <h4 class="font-bold text-brand-brown">ลักษณะ</h4>
             <p class="text-gray-800">รูปร่างคล้ายหม้อดินเผาสีน้ำตาลแดง มีใบหน้าและหูคล้ายช้าง, ยืนอยู่บนฐานที่มั่นคง
@@ -831,7 +846,7 @@
             <p class="text-gray-800">ความเร่งรีบ/เสียงดังอึกทึก: ไม่ชอบความวุ่นวาย, การทำลายงานศิลปะ, ความแห้งแล้ง</p>
           </div>
         </div>
-        <div>
+        <div class="stagger-item">
           <h4 class="font-bold text-brand-brown">ความสามารถ</h4>
           <p class="text-gray-800">พ่นและปั้นดินวิเศษ: ผาดินสามารถ พ่นดินเหนียวคุณภาพเยี่ยม ออกมาจากตัว และใช้
             งวงของตนเองปั้นดินเหล่านั้นให้เป็นเครื่องปั้นดินเผา รูปทรงต่างๆ ได้อย่างรวดเร็วและประณีต
@@ -885,25 +900,29 @@
       <div class="grid grid-cols-2 md:grid-cols-3 gap-12 max-w-4xl mx-auto">
         <div class="text-center space-y-4">
           <div class="aspect-square flex items-center justify-center">
-            <img src="png/5 ด้านหน้า.png" alt="ยืน" class="max-w-full max-h-full" referrerPolicy="no-referrer" />
+            <img src="png/5 ด้านหน้า.png" alt="ยืน" class="max-w-full max-h-full" referrerPolicy="no-referrer" /
+              loading="lazy">
           </div>
           <p class="font-bold text-brand-brown">ยืน</p>
         </div>
         <div class="text-center space-y-4">
           <div class="aspect-square flex items-center justify-center">
-            <img src="png/5 เดิน.png" alt="เดิน" class="max-w-full max-h-full" referrerPolicy="no-referrer" />
+            <img src="png/5 เดิน.png" alt="เดิน" class="max-w-full max-h-full" referrerPolicy="no-referrer" /
+              loading="lazy">
           </div>
           <p class="font-bold text-brand-brown">เดิน</p>
         </div>
         <div class="text-center space-y-4">
           <div class="aspect-square flex items-center justify-center">
-            <img src="png/5 นั่ง.png" alt="นั่ง" class="max-w-full max-h-full" referrerPolicy="no-referrer" />
+            <img src="png/5 นั่ง.png" alt="นั่ง" class="max-w-full max-h-full" referrerPolicy="no-referrer" /
+              loading="lazy">
           </div>
           <p class="font-bold text-brand-brown">นั่ง</p>
         </div>
         <div class="text-center space-y-4">
           <div class="aspect-square flex items-center justify-center">
-            <img src="png/5 นอน.png" alt="นอน" class="max-w-full max-h-full" referrerPolicy="no-referrer" />
+            <img src="png/5 นอน.png" alt="นอน" class="max-w-full max-h-full" referrerPolicy="no-referrer" /
+              loading="lazy">
           </div>
           <p class="font-bold text-brand-brown">นอน</p>
         </div>
@@ -951,16 +970,16 @@
 
 
     <section id="mascot" class="section-padding bg-brand-yellow grid md:grid-cols-3 gap-12">
-      <div class="md:col-span-2 space-y-6">
-        <h2 class="text-5xl font-bold text-brand-brown mb-8">ตัวมาสคอต: ฮักชวา</h2>
-        <div>
+      <div class="md:col-span-2 space-y-6 stagger-wrapper">
+        <h2 class="text-5xl font-bold text-brand-brown mb-8 stagger-item">ตัวมาสคอต: ฮักชวา</h2>
+        <div class="stagger-item">
           <h4 class="font-bold text-brand-brown">ที่มา</h4>
           <p class="text-gray-800">จิตวิญญาณแห่งการแปรเปลี่ยน: เกิดจากพลังงานความรัก (ฮัก) ความสามัคคี
             และภูมิปัญญาของชาวล้านนาในเชียงราย ที่นำผักตบชวาซึ่งเคยถูกมองว่าเป็นวัชพืชไร้ค่า
             มาแปรสภาพเป็นงานจักสานอันทรงคุณค่า ฮักชวาจึงเป็นตัวแทนของการมองเห็น "คุณค่า" ในสิ่งธรรมดา
             และการสืบทอดงานฝีมือท้องถิ่น </p>
         </div>
-        <div class="grid grid-cols-2 gap-6">
+        <div class="grid grid-cols-2 gap-6 stagger-item">
           <div>
             <h4 class="font-bold text-brand-brown">ลักษณะ</h4>
             <p class="text-gray-800">รูปร่างคล้ายหัวหอม/หัวไชเท้า มีใบไม้สีเขียวด้านบน ห่อหุ้มด้วยกาบพืชสีอ่อนๆ
@@ -983,13 +1002,13 @@
               การทิ้งขว้างวัสดุ</p>
           </div>
         </div>
-        <div>
+        <div class="stagger-item">
           <h4 class="font-bold text-brand-brown">ความสามารถ</h4>
           <p class="text-gray-800">1. การสานตะกร้าวิเศษ: สามารถ สานตะกร้าผักตบชวาได้อย่างรวดเร็ว
             โดยตะกร้าที่ถูกสานจะมีพลังในการ ดูดซับความทุกข์และความไร้ค่า ออกไป <br />2. ตะกร้าไร้ก้น (ปาฏิหาริย์):
             ที่สามารถ บรรจุสิ่งของได้จำนวนมหาศาล</p>
         </div>
-        <div>
+        <div class="stagger-item">
           <h4 class="font-bold text-brand-brown">ลักษณะเฉพาะ</h4>
           <p class="text-gray-800">มักจะ นอนหลับในดิน และ เข้าใจผิดอยู่เสมอว่าตนเองเป็นหัวไชเท้า</p>
         </div>
@@ -1041,31 +1060,36 @@
       <div class="grid grid-cols-2 md:grid-cols-3 gap-12 max-w-4xl mx-auto">
         <div class="text-center space-y-4">
           <div class="aspect-square flex items-center justify-center">
-            <img src="png/6 ด้านหน้า.png" alt="ยืน" class="max-w-full max-h-full" referrerPolicy="no-referrer" />
+            <img src="png/6 ด้านหน้า.png" alt="ยืน" class="max-w-full max-h-full" referrerPolicy="no-referrer" /
+              loading="lazy">
           </div>
           <p class="font-bold text-brand-brown">ยืน</p>
         </div>
         <div class="text-center space-y-4">
           <div class="aspect-square flex items-center justify-center">
-            <img src="png/6 เดิน.png" alt="เดิน" class="max-w-full max-h-full" referrerPolicy="no-referrer" />
+            <img src="png/6 เดิน.png" alt="เดิน" class="max-w-full max-h-full" referrerPolicy="no-referrer" /
+              loading="lazy">
           </div>
           <p class="font-bold text-brand-brown">เดิน</p>
         </div>
         <div class="text-center space-y-4">
           <div class="aspect-square flex items-center justify-center">
-            <img src="png/6 นั่ง.png" alt="นั่ง" class="max-w-full max-h-full" referrerPolicy="no-referrer" />
+            <img src="png/6 นั่ง.png" alt="นั่ง" class="max-w-full max-h-full" referrerPolicy="no-referrer" /
+              loading="lazy">
           </div>
           <p class="font-bold text-brand-brown">นั่ง</p>
         </div>
         <div class="text-center space-y-4">
           <div class="aspect-square flex items-center justify-center">
-            <img src="png/6 นอน.png" alt="นอน" class="max-w-full max-h-full" referrerPolicy="no-referrer" />
+            <img src="png/6 นอน.png" alt="นอน" class="max-w-full max-h-full" referrerPolicy="no-referrer" /
+              loading="lazy">
           </div>
           <p class="font-bold text-brand-brown">นอน</p>
         </div>
         <div class="text-center space-y-4">
           <div class="aspect-square flex items-center justify-center">
-            <img src="png/6 กระโดด.png" alt="กระโดด" class="max-w-full max-h-full" referrerPolicy="no-referrer" />
+            <img src="png/6 กระโดด.png" alt="กระโดด" class="max-w-full max-h-full" referrerPolicy="no-referrer" /
+              loading="lazy">
           </div>
           <p class="font-bold text-brand-brown">กระโดด</p>
         </div>
@@ -1115,16 +1139,16 @@
 
 
     <section id="mascot" class="section-padding bg-brand-yellow grid md:grid-cols-3 gap-12">
-      <div class="md:col-span-2 space-y-6">
-        <h2 class="text-5xl font-bold text-brand-brown mb-8">ตัวมาสคอต: พลองคำ</h2>
-        <div>
+      <div class="md:col-span-2 space-y-6 stagger-wrapper">
+        <h2 class="text-5xl font-bold text-brand-brown mb-8 stagger-item">ตัวมาสคอต: พลองคำ</h2>
+        <div class="stagger-item">
           <h4 class="font-bold text-brand-brown">ที่มา</h4>
           <p class="text-gray-800">เกิดจากตำนานเล่าขานของชาวบ้านเชียงรายที่ว่ามีภูตคอยพิทักษ์ผลไม้และพืชพรรณพื้นเมือง
             วันหนึ่งมีภูตตัวหนึ่งได้กินสับปะรดภูแลที่หวานหอมจนร่างกายเปลี่ยนไป กลายเป็นร่างใหม่ผิวเป็นลายสับปะรดสีทอง
             และได้รับพลังพิเศษในการคุ้มครองผู้คนที่เพาะปลูกอย่างซื่อสัตย์และสุจริต "พลองคำ"
             จึงเป็นสัญลักษณ์ของความซื่อสัตย์ อุดมสมบูรณ์ และการเปลี่ยนแปลงสู่สิ่งที่ดีงาม</p>
         </div>
-        <div class="grid grid-cols-2 gap-6">
+        <div class="grid grid-cols-2 gap-6 stagger-item">
           <div>
             <h4 class="font-bold text-brand-brown">ลักษณะ</h4>
             <p class="text-gray-800">รูปร่างคล้ายแมวตัวเล็กๆ มีผิวเป็นลายสับปะรดสีทองอร่าม มีจุกสับปะรดอยู่บนศีรษะ </p>
@@ -1144,7 +1168,7 @@
             <p class="text-gray-800">ความไม่ซื่อสัตย์: ไม่ชอบคนที่โกงหรือทำลายพืชผล, น้ำค้างแข็ง</p>
           </div>
         </div>
-        <div>
+        <div class="stagger-item">
           <h4 class="font-bold text-brand-brown">ความสามารถ</h4>
           <p class="text-gray-800">กายกินได้ (โชคลาภ): ชิ้นส่วนของร่างกาย (เช่น ขน หรือใบ) สามารถ
             หลุดออกไปให้ผู้คนกินได้ และมีรสชาติอร่อยที่สุด ซึ่งจะมอบ โชคลาภ และ ความอุดมสมบูรณ์ ให้แก่ผู้ที่</p>
@@ -1197,31 +1221,36 @@
       <div class="grid grid-cols-2 md:grid-cols-3 gap-12 max-w-4xl mx-auto">
         <div class="text-center space-y-4">
           <div class="aspect-square flex items-center justify-center">
-            <img src="png/7 ด้านหน้า.png" alt="ยืน" class="max-w-full max-h-full" referrerPolicy="no-referrer" />
+            <img src="png/7 ด้านหน้า.png" alt="ยืน" class="max-w-full max-h-full" referrerPolicy="no-referrer" /
+              loading="lazy">
           </div>
           <p class="font-bold text-brand-brown">ยืน</p>
         </div>
         <div class="text-center space-y-4">
           <div class="aspect-square flex items-center justify-center">
-            <img src="png/7 เดิน.png" alt="เดิน" class="max-w-full max-h-full" referrerPolicy="no-referrer" />
+            <img src="png/7 เดิน.png" alt="เดิน" class="max-w-full max-h-full" referrerPolicy="no-referrer" /
+              loading="lazy">
           </div>
           <p class="font-bold text-brand-brown">เดิน</p>
         </div>
         <div class="text-center space-y-4">
           <div class="aspect-square flex items-center justify-center">
-            <img src="png/7 นั่ง.png" alt="นั่ง" class="max-w-full max-h-full" referrerPolicy="no-referrer" />
+            <img src="png/7 นั่ง.png" alt="นั่ง" class="max-w-full max-h-full" referrerPolicy="no-referrer" /
+              loading="lazy">
           </div>
           <p class="font-bold text-brand-brown">นั่ง</p>
         </div>
         <div class="text-center space-y-4">
           <div class="aspect-square flex items-center justify-center">
-            <img src="png/7 นอน.png" alt="นอน" class="max-w-full max-h-full" referrerPolicy="no-referrer" />
+            <img src="png/7 นอน.png" alt="นอน" class="max-w-full max-h-full" referrerPolicy="no-referrer" /
+              loading="lazy">
           </div>
           <p class="font-bold text-brand-brown">นอน</p>
         </div>
         <div class="text-center space-y-4">
           <div class="aspect-square flex items-center justify-center">
-            <img src="png/7 กระโดด.png" alt="กระโดด" class="max-w-full max-h-full" referrerPolicy="no-referrer" />
+            <img src="png/7 กระโดด.png" alt="กระโดด" class="max-w-full max-h-full" referrerPolicy="no-referrer" /
+              loading="lazy">
           </div>
           <p class="font-bold text-brand-brown">กระโดด</p>
         </div>
@@ -1270,15 +1299,15 @@
 
 
     <section id="mascot" class="section-padding bg-brand-yellow grid md:grid-cols-3 gap-12">
-      <div class="md:col-span-2 space-y-6">
-        <h2 class="text-5xl font-bold text-brand-brown mb-8">ตัวมาสคอต: หอมหมื่นดอย</h2>
-        <div>
+      <div class="md:col-span-2 space-y-6 stagger-wrapper">
+        <h2 class="text-5xl font-bold text-brand-brown mb-8 stagger-item">ตัวมาสคอต: หอมหมื่นดอย</h2>
+        <div class="stagger-item">
           <h4 class="font-bold text-brand-brown">ที่มา</h4>
           <p class="text-gray-800">จิตวิญญาณแห่งเมล็ดกาแฟ:
             เกิดจากพลังงานความหอมของเมล็ดกาแฟอาราบิก้าที่ปลูกบนดอยสูงของเชียงราย ซึ่งเป็นแหล่งผลิตกาแฟคุณภาพดี
             ภูตตนนี้จึงมีรูปลักษณ์คล้ายเมล็ดกาแฟที่ถูกห่อหุ้มอย่างดี รอการคั่วเพื่อปลดปล่อยกลิ่นหอมไปทั่วหมื่นดอย </p>
         </div>
-        <div class="grid grid-cols-2 gap-6">
+        <div class="grid grid-cols-2 gap-6 stagger-item">
           <div>
             <h4 class="font-bold text-brand-brown">ลักษณะ</h4>
             <p class="text-gray-800">ร่างกายเป็นเมล็ดกาแฟคั่วเข้ม (สีน้ำตาล)
@@ -1298,7 +1327,7 @@
             <p class="text-gray-800">ความเฉื่อยชา, ความชื้น, การคั่วกาแฟจนไหม้ (ทำให้ขมจัด)</p>
           </div>
         </div>
-        <div>
+        <div class="stagger-item">
           <h4 class="font-bold text-brand-brown">ความสามารถ</h4>
           <p class="text-gray-800">แยกร่างและคั่วกาแฟ : สามารถ แยกร่างตัวเองออกเป็น "เมล็ดกาแฟ" จำนวนมากได้ทันที
             และร่างแยกเหล่านี้สามารถ คั่วตัวเองให้กลายเป็นเมล็ดกาแฟที่สมบูรณ์แบบ
@@ -1354,31 +1383,36 @@
       <div class="grid grid-cols-2 md:grid-cols-3 gap-12 max-w-4xl mx-auto">
         <div class="text-center space-y-4">
           <div class="aspect-square flex items-center justify-center">
-            <img src="png/8 ด้านหน้า.png" alt="ยืน" class="max-w-full max-h-full" referrerPolicy="no-referrer" />
+            <img src="png/8 ด้านหน้า.png" alt="ยืน" class="max-w-full max-h-full" referrerPolicy="no-referrer" /
+              loading="lazy">
           </div>
           <p class="font-bold text-brand-brown">ยืน</p>
         </div>
         <div class="text-center space-y-4">
           <div class="aspect-square flex items-center justify-center">
-            <img src="png/8 เดิน.png" alt="เดิน" class="max-w-full max-h-full" referrerPolicy="no-referrer" />
+            <img src="png/8 เดิน.png" alt="เดิน" class="max-w-full max-h-full" referrerPolicy="no-referrer" /
+              loading="lazy">
           </div>
           <p class="font-bold text-brand-brown">เดิน</p>
         </div>
         <div class="text-center space-y-4">
           <div class="aspect-square flex items-center justify-center">
-            <img src="png/8 นั่ง.png" alt="นั่ง" class="max-w-full max-h-full" referrerPolicy="no-referrer" />
+            <img src="png/8 นั่ง.png" alt="นั่ง" class="max-w-full max-h-full" referrerPolicy="no-referrer" /
+              loading="lazy">
           </div>
           <p class="font-bold text-brand-brown">นั่ง</p>
         </div>
         <div class="text-center space-y-4">
           <div class="aspect-square flex items-center justify-center">
-            <img src="png/8 นอน.png" alt="นอน" class="max-w-full max-h-full" referrerPolicy="no-referrer" />
+            <img src="png/8 นอน.png" alt="นอน" class="max-w-full max-h-full" referrerPolicy="no-referrer" /
+              loading="lazy">
           </div>
           <p class="font-bold text-brand-brown">นอน</p>
         </div>
         <div class="text-center space-y-4">
           <div class="aspect-square flex items-center justify-center">
-            <img src="png/8 กระโดด.png" alt="กระโดด" class="max-w-full max-h-full" referrerPolicy="no-referrer" />
+            <img src="png/8 กระโดด.png" alt="กระโดด" class="max-w-full max-h-full" referrerPolicy="no-referrer" /
+              loading="lazy">
           </div>
           <p class="font-bold text-brand-brown">กระโดด</p>
         </div>
@@ -1557,27 +1591,13 @@
     </footer>
   </div>
 
-  <script>
-    // Initialize Lucide icons
-    lucide.createIcons();
 
-    // Simple Intersection Observer for scroll animations
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('animate-fade-in');
-          observer.unobserve(entry.target);
-        }
-      });
-    }, { threshold: 0.1 });
-
-    document.querySelectorAll('section').forEach(section => {
-      if (!section.id || section.id !== 'home') {
-        section.classList.add('opacity-0');
-        observer.observe(section);
-      }
-    });
-  </script>
+  <!-- Back to Top Button -->
+  <button id="backToTop"
+    class="fixed bottom-8 right-8 bg-brand-brown text-white p-4 rounded-full shadow-2xl opacity-0 invisible transition-all duration-300 hover:scale-110 z-50">
+    <i data-lucide="chevron-up" class="w-6 h-6"></i>
+  </button>
+  <!-- JavaScript is now loaded via script.js in the head -->
 </body>
 
 </html>
