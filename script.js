@@ -23,21 +23,15 @@ document.addEventListener('DOMContentLoaded', () => {
         lucide.createIcons();
     }
 
-    // 1. Intersection Observer for Scroll Animations & Staggered Reveal
     const observerOptions = {
       root: null,
-      rootMargin: '0px',
+      rootMargin: '50px',
       threshold: 0.1
     };
 
     const observer = new IntersectionObserver((entries, obs) => {
       entries.forEach(entry => {
         if (entry.isIntersecting) {
-          // If it's a section, fade it in
-          if (entry.target.tagName.toLowerCase() === 'section') {
-            entry.target.classList.add('animate-fade-in');
-            obs.unobserve(entry.target);
-          }
           // If it's a stagger wrapper, reveal children
           if (entry.target.classList.contains('stagger-wrapper')) {
             entry.target.classList.add('is-visible');
@@ -46,13 +40,6 @@ document.addEventListener('DOMContentLoaded', () => {
         }
       });
     }, observerOptions);
-
-    document.querySelectorAll('section').forEach(section => {
-      if (!section.id || section.id !== 'home') {
-        section.classList.add('opacity-0');
-        observer.observe(section);
-      }
-    });
 
     document.querySelectorAll('.stagger-wrapper').forEach(wrapper => {
       observer.observe(wrapper);
