@@ -1,0 +1,226 @@
+@import url('https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;500;600;700&display=swap');
+
+:root {
+  --brand-yellow: #fcd34d;
+  --brand-brown: #5c4033;
+  --brand-gray: #e5e7eb;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Kanit', sans-serif;
+  color: #111827;
+  background-color: #ffffff;
+  margin: 0;
+}
+
+/* Custom classes */
+.floating-nav {
+  position: fixed;
+  top: 1rem;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 50;
+  background-color: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(12px);
+  padding: 0.75rem 1.5rem;
+  border-radius: 9999px;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+  border: 1px solid #f3f4f6;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: all 0.3s;
+  width: 90%;
+  max-width: 64rem;
+}
+
+.nav-links {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  margin-left: auto;
+}
+
+@media (min-width: 768px) {
+  .nav-links {
+    gap: 2rem;
+  }
+}
+
+.section-padding {
+  padding: 5rem 1.5rem;
+}
+
+@media (min-width: 768px) {
+  .section-padding {
+    padding-left: 3rem;
+    padding-right: 3rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .section-padding {
+    padding-left: 6rem;
+    padding-right: 6rem;
+  }
+}
+
+.outline-text {
+  -webkit-text-stroke: 1px #5c4033;
+  color: transparent;
+}
+
+/* Ensure images don't overflow */
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes slideInLeft {
+  from { opacity: 0; transform: translateX(-20px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes slideInRight {
+  from { opacity: 0; transform: translateX(20px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes scaleIn {
+  from { opacity: 0; scale: 0.8; }
+  to { opacity: 1; scale: 1; }
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.8s ease-out forwards;
+}
+
+.animate-slide-left {
+  animation: slideInLeft 0.8s ease-out forwards;
+}
+
+.animate-slide-right {
+  animation: slideInRight 0.8s ease-out forwards;
+}
+
+.animate-scale-in {
+  animation: scaleIn 0.8s ease-out forwards;
+}
+
+/* Animated Mascot Section Pattern */
+.mascot-pattern {
+  background-color: var(--brand-yellow);
+  background-image: 
+    radial-gradient(rgba(92, 64, 51, 0.08) 3px, transparent 3px),
+    radial-gradient(rgba(92, 64, 51, 0.08) 3px, transparent 3px);
+  background-size: 32px 32px;
+  background-position: 0 0, 16px 16px;
+  animation: patternMove 15s linear infinite;
+  position: relative;
+  overflow: hidden;
+}
+
+@keyframes patternMove {
+  0% {
+    background-position: 0 0, 16px 16px;
+  }
+  100% {
+    background-position: 32px 32px, 48px 48px;
+  }
+}
+
+/* Glassmorphism Card for Mascot Info */
+.mascot-pattern > div:first-child {
+  background: rgba(255, 255, 255, 0.45);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  padding: 2.5rem;
+  border-radius: 1.5rem;
+  border: 1px solid rgba(255, 255, 255, 0.6);
+  box-shadow: 0 10px 30px -10px rgba(92, 64, 51, 0.08);
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.mascot-pattern > div:first-child:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 20px 40px -10px rgba(92, 64, 51, 0.15);
+  background: rgba(255, 255, 255, 0.55);
+}
+
+/* Floating animation for mascot image */
+.mascot-pattern img {
+  animation: floatMascot 4s ease-in-out infinite;
+  transition: scale 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275), filter 0.4s;
+  filter: drop-shadow(0 15px 25px rgba(92,64,51,0.25));
+}
+
+.mascot-pattern img:hover {
+  scale: 1.05;
+  filter: drop-shadow(0 25px 35px rgba(92,64,51,0.35));
+  animation-play-state: paused;
+}
+
+@keyframes floatMascot {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-15px);
+  }
+}
+
+
+/* --- UI Enhancements & Mascot Interactions --- */
+
+/* Back to Top Button */
+.show-back-to-top {
+  opacity: 1 !important;
+  visibility: visible !important;
+}
+
+/* ScrollSpy Active Nav */
+.nav-links a.nav-active {
+  color: var(--brand-brown) !important;
+  font-weight: 700;
+  transform: scale(1.05);
+}
+
+/* Staggered Animations */
+.stagger-wrapper .stagger-item {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.stagger-wrapper.is-visible .stagger-item {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.stagger-wrapper.is-visible .stagger-item:nth-child(1) { transition-delay: 0.1s; }
+.stagger-wrapper.is-visible .stagger-item:nth-child(2) { transition-delay: 0.2s; }
+.stagger-wrapper.is-visible .stagger-item:nth-child(3) { transition-delay: 0.3s; }
+.stagger-wrapper.is-visible .stagger-item:nth-child(4) { transition-delay: 0.4s; }
+.stagger-wrapper.is-visible .stagger-item:nth-child(5) { transition-delay: 0.5s; }
+
+/* 3D Tilt Element Wrapper */
+.tilt-wrapper {
+  perspective: 1000px;
+  transform-style: preserve-3d;
+}
+
+.tilt-element {
+  will-change: transform;
+  transition: transform 0.1s ease-out, filter 0.4s ease-out;
+}
+
